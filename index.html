@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>欢迎来到我的个人主页</title>
+    <!-- 引入 Animate.css 动画库 -->
+    <link rel="stylesheet" href="https://cloudflare.com"/>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+        .container {
+            text-align: center;
+        }
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+        }
+        .typed-text {
+            font-size: 1.5rem;
+            color: #00f2fe;
+            min-height: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- 这里使用了 Animate.css 的回弹淡入动画，一进网页文字就会动 -->
+        <h1 class="animate__animated animate__backInDown">👋 你好，我是 [你的名字]</h1>
+        <!-- 动态打字机效果放置的地方 -->
+        <div class="typed-text"><span id="typed"></span></div>
+    </div>
+
+    <!-- 引入 Typed.js 打字机动画库 -->
+    <script src="https://unpkg.com"></script>
+    <script>
+        // 配置打字机动画的内容
+        var typed = new Typed('#typed', {
+            strings: ['欢迎来到我的个人主页！', '我是一名网页开发者。', '喜欢探索新鲜的技术。', '用代码改变世界。'],
+            typeSpeed: 60,   // 打字速度
+            backSpeed: 30,   // 退格速度
+            loop: true       // 循环播放动画
+        });
+    </script>
+</body>
+</html>
